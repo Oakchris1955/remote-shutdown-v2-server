@@ -1,0 +1,27 @@
+{
+	"name": "remote-shutdown-v2-server",
+	"private": true,
+	"version": "1.0.0",
+	"main": "dist/index.js",
+	"scripts": {
+		"build": "tsc",
+		"start": "node dist/index.js",
+		"format": "prettier . --write",
+		"dev:tsc": "tsc -w",
+		"dev:watch": "nodemon dist/* .env",
+		"dev": "concurrently -k -n \"TypeScript,App\" -c \"cyan,yellow.bold\" \"npm run dev:tsc\" \"npm run dev:watch\""
+	},
+	"author": "Oakchris1955",
+	"license": "UNLICENSED",
+	"devDependencies": {
+		"concurrently": "^8.2.2",
+		"nodemon": "^3.0.1",
+		"prettier": "3.1.0"
+	},
+	"dependencies": {
+		"@types/node": "^20.10.0",
+		"typescript": "^5.3.2",
+		"dotenv": "^16.3.1",
+		"fastify": "^4.24.3"
+	}
+}
